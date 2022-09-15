@@ -53,7 +53,7 @@ while (True):
             for data in file_to_send:
                 c.sendall(data)
     elif (msg == "UPD"):
-        downloadDir = "/IIT GN Sem 5/CN/CN_assignments/server_folder"
+        downloadDir = os.getcwd()
         filename = c.recv(1024).decode()
         with open(os.path.join(downloadDir, filename), 'wb') as file_to_write:
             data = c.recv(1024)
