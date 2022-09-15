@@ -55,6 +55,7 @@ while (True):
             for data in file_to_send:
                 s.sendall(data)
         print('OK')
+        crypto1.substitute_decode(filename)
     else:
         print('error')
         break
