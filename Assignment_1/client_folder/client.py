@@ -25,7 +25,7 @@ while (True):
         s.send(x[1].encode())
         print(s.recv(1024).decode())
     elif (x[0] == "DWD"):
-        downloadDir = "/IIT GN Sem 5/CN/CN_assignments/client_folder"
+        downloadDir = os.getcwd()
         filename = x[1]
         s.send(x[0].encode())
         s.send(filename.encode())
