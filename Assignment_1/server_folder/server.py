@@ -52,6 +52,7 @@ while (True):
         with open(reqFile, 'rb') as file_to_send:
             for data in file_to_send:
                 c.sendall(data)
+        crypto2.substitute_decode(reqFile)    
     elif (msg == "UPD"):
         downloadDir = os.getcwd()
         filename = c.recv(1024).decode()
